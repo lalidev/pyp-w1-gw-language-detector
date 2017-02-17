@@ -31,7 +31,6 @@ def detect_language(text, languages):
            cnt = text.split().count(common_word)
            if cnt > 0:
                common_cnt+=cnt
-               print common_word , cnt
         scan_result[lng['name']]= common_cnt
     language = sorted(scan_result.iteritems(),key=operator.itemgetter(1),reverse=True)[0][0]
     return language
